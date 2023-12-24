@@ -33,7 +33,7 @@ body {
   border-radius: 10px;
   text-align: right;
   margin-bottom: 10px;
-  font-size: 40px;
+  font-size: 20px;
   pointer-events: none;
 }
 .buttons {
@@ -50,7 +50,6 @@ body {
 }
 .buttons button:active {
   transform: scale(0.80);
-  color: blue;
 }
 .operator {
   color: #0689fc;
@@ -125,10 +124,6 @@ const calculate = (btnValue) => {
 buttons.forEach((button) => {
   //Button click listener calls calculate() with dataset value as argument.
   button.addEventListener("click", (e) => calculate(e.target.dataset.value));
-});
-    </script>
-  </body>
-</html>
 });
     </script>
   </body>
