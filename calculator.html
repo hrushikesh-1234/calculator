@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: lightgrey;
+  background-image: radial-gradient(circle, #de34de, #ff0aa0, #ff4366, #ff7636, #eb9f12);
 }
 .container {
   position: relative;
@@ -23,7 +23,7 @@ body {
   width: 100%;
   border-radius: 20px;
   padding: 20px 20px 20px;
-  background:rgb(7, 233, 222);
+  background-image: radial-gradient(circle, #6034de, #0087ff, #00b5ff, #00d6a1, #4beb12);
   border-style: solid;
 }
 .display {
@@ -33,7 +33,7 @@ body {
   border-radius: 10px;
   text-align: right;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 40px;
   pointer-events: none;
 }
 .buttons {
@@ -50,6 +50,7 @@ body {
 }
 .buttons button:active {
   transform: scale(0.80);
+  color: blue;
 }
 .operator {
   color: #0689fc;
@@ -123,6 +124,11 @@ const calculate = (btnValue) => {
 //Add event listener to buttons, call calculate() on click.
 buttons.forEach((button) => {
   //Button click listener calls calculate() with dataset value as argument.
+  button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+});
+    </script>
+  </body>
+</html>
   button.addEventListener("click", (e) => calculate(e.target.dataset.value));
 });
     </script>
